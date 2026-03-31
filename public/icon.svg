@@ -1,0 +1,25 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B8CFF" />
+      <stop offset="1" stop-color="#7A4BFF" />
+    </linearGradient>
+    <linearGradient id="strokeGradient" x1="36" y1="36" x2="94" y2="94" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#EAF0FF" />
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#bgGradient)" />
+  <circle cx="64" cy="64" r="34" stroke="url(#strokeGradient)" stroke-width="4" opacity="0.35" />
+
+  <!-- Monograma "RM" simplificado para favicon -->
+  <path
+    d="M42 90V38H62.5C71.2 38 77 43.3 77 51.5C77 57.5 73.8 62 68.6 64.3L77.5 90H67.3L59.5 66.5H51.4V90H42Z"
+    fill="#FFFFFF"
+  />
+  <path
+    d="M86 90V38H95.5L106 56.3L116.5 38H126V90H116.8V56.2L106 74.3L95.2 56.2V90H86Z"
+    fill="#FFFFFF"
+  />
+</svg>
