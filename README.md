@@ -1,67 +1,124 @@
-# ruisergio-portafolio
+# RuiSergio.dev Portfolio
 
-Site de portfólio pessoal com foco em apresentação profissional, projetos e
-contato. Construído com Next.js, React e Tailwind CSS.
+Portfolio profissional desenvolvido com Next.js para apresentar perfil, experiencia, skills e projetos, com foco em design moderno, performance e boa experiencia de utilizacao.
 
-## Visão geral
+## Preview
 
-Este projeto reúne:
+- **Projeto**: `ruisergio.dev-portafolio`
+- **Stack principal**: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
+- **Recursos**: tema claro/escuro, multi-idioma, secao administrativa e integracao com Supabase
 
-- Apresentação do profissional e resumo de skills.
-- Seções de experiência e projetos.
-- Botões de contato e download de currículo.
-- Layout moderno com efeitos visuais suaves.
-- Suporte a tema claro/escuro e idioma.
+## Funcionalidades
+
+- Landing page moderna com secoes de:
+  - Sobre
+  - Skills
+  - Experiencia
+  - Projetos
+  - Contacto
+- Navegacao responsiva (desktop e mobile)
+- Tema claro/escuro com persistencia
+- Internacionalizacao (PT/EN)
+- Painel admin para gestao de projetos
+- Integracao com Supabase (cliente, servidor e middleware)
+- Favicon e identidade visual personalizados
 
 ## Tecnologias
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Supabase (opcional, caso use autenticação/integrações)
+- **Framework**: Next.js 16
+- **UI**: React 19 + Tailwind CSS 4 + Radix UI
+- **Animacoes**: Framer Motion
+- **Backend/BaaS**: Supabase
+- **Validacao/Formularios**: Zod + React Hook Form
+- **Qualidade**: TypeScript + ESLint
 
-## Como rodar localmente
+## Estrutura do projeto
 
-1. Instale as dependências:
-   ```bash
-   pnpm install
-   ```
+```text
+app/
+  page.tsx                  # pagina principal
+  layout.tsx                # metadata global, providers e icones
+  admin/                    # area administrativa
+components/
+  portfolio/                # secoes publicas do portfolio
+  admin/                    # componentes do painel admin
+  ui/                       # biblioteca de componentes reutilizaveis
+lib/
+  supabase/                 # clientes Supabase (browser/server/middleware)
+  translations.ts           # textos e traducao PT/EN
+public/
+  icon.svg                  # favicon/logomarca
+```
 
-2. Inicie o servidor de desenvolvimento:
-   ```bash
-   pnpm dev
-   ```
+## Como executar localmente
 
-3. Acesse em: `http://localhost:3000`
+### 1) Clonar o repositorio
 
-## Scripts úteis
+```bash
+git clone https://github.com/SEU-USUARIO/ruisergio.dev-portafolio.git
+cd ruisergio.dev-portafolio
+```
 
-- `pnpm dev` — roda o projeto em modo desenvolvimento
-- `pnpm build` — gera build de produção
-- `pnpm start` — inicia o app em produção
-- `pnpm lint` — executa o lint
+### 2) Instalar dependencias
 
-## Personalização rápida
+```bash
+npm install
+```
 
-Alguns pontos comuns para ajustar:
+### 3) Configurar variaveis de ambiente
 
-- Textos e conteúdo: `lib/translations.ts`
-- Hero e botões principais: `components/portfolio/hero.tsx`
-- Navegação: `components/portfolio/header.tsx`
-- Estilos globais: `app/globals.css`
+Crie um ficheiro `.env.local` na raiz do projeto:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### 4) Iniciar em desenvolvimento
+
+```bash
+npm run dev
+```
+
+A aplicacao ficara disponivel em `http://localhost:3000`.
+
+## Scripts disponiveis
+
+- `npm run dev` - inicia o ambiente de desenvolvimento
+- `npm run build` - gera build de producao
+- `npm run start` - inicia a app em modo producao
+- `npm run lint` - executa analise de codigo com ESLint
 
 ## Deploy
 
-Você pode publicar o projeto em plataformas como Vercel, Netlify ou
-Cloudflare Pages. Para Vercel:
+Este projeto pode ser publicado em:
 
-1. Conecte o repositório.
-2. Configure o build (Next.js padrão).
-3. Faça o deploy.
+- Vercel (recomendado para Next.js)
+- Netlify
+- Cloudflare Pages
 
-## Licença
+### Deploy na Vercel
 
-Uso livre para fins pessoais e profissionais. Se quiser publicar o projeto
-como open source com licença específica, ajuste esta seção.
+1. Importar o repositorio no painel da Vercel
+2. Definir as variaveis de ambiente
+3. Executar deploy
+
+## Personalizacao rapida
+
+- **Textos e traducao**: `lib/translations.ts`
+- **Cabecalho e navegacao**: `components/portfolio/header.tsx`
+- **Hero section**: `components/portfolio/hero.tsx`
+- **Rodape**: `components/portfolio/footer.tsx`
+- **Estilos globais**: `app/globals.css`
+
+## Autor
+
+**Rui Sergio Mane**
+
+- Portfolio: `ruisergio.dev` (quando publicado)
+- GitHub: `https://github.com/SEU-USUARIO`
+
+## Licenca
+
+Este projeto esta disponivel para uso pessoal/profissional.
+Se desejares abrir como open-source, recomenda-se adicionar uma licenca formal (ex.: MIT).
