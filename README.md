@@ -1,5 +1,7 @@
 # RuiSergio.dev Portfolio
 
+![Capa do projeto RuiSergio.dev](.github/assets/readme-cover.png)
+
 Portfolio profissional desenvolvido com Next.js para apresentar perfil, experiencia, skills e projetos, com foco em design moderno, performance e boa experiencia de utilizacao.
 
 ## Preview
