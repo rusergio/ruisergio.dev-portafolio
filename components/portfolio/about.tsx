@@ -17,18 +17,34 @@ const skillsByCategory = {
   frontend: [
     "JavaScript / TypeScript",
     "React / Next.js",
+    "HTML / CSS / Tailwind",
+    "React Native / Expo",
   ],
   backend: [
     "Node.js",
-    "Python",
-    "GraphQL / REST APIs",
+    "Express",
+    "Laravel",
+    "PHP",
+    "Spring Boot",
+    "Java",
+    "REST & GraphQL APIs",
   ],
   database: [
-    "PostgreSQL / MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "Firebase",
+    "Supabase",
+    "SQLite",
+    "MongoDB",
+    "Prisma",
   ],
   devops: [
-    "AWS / Docker",
-    "Git / CI/CD",
+    "Docker",
+    "Git / GitHub",
+    "AWS / Cloud",
+    "CI/CD",
+    "Linux",
+    "Vercel / Deploy",
   ],
 }
 
@@ -103,8 +119,8 @@ export function About() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8 mt-12">
                 {[
-                  { value: "5+", label: t.about.stat1 },
-                  { value: "50+", label: t.about.stat2 },
+                  { value: "3+", label: t.about.stat1 },
+                  { value: "10+", label: t.about.stat2 },
                   { value: "20+", label: t.about.stat3 },
                 ].map((stat, index) => (
                   <motion.div

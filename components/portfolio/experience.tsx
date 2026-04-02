@@ -5,47 +5,13 @@ import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 
-const experiences = [
-  {
-    period: "2023 — Presente",
-    title: "Senior Software Engineer",
-    company: "TechCorp",
-    companyUrl: "https://example.com",
-    description:
-      "Lidero o desenvolvimento de microserviços críticos que processam milhões de transações diárias. Implemento arquiteturas escaláveis e mentoro desenvolvedores juniores na equipa.",
-    technologies: ["TypeScript", "Node.js", "AWS", "Kubernetes", "PostgreSQL"],
-  },
-  {
-    period: "2021 — 2023",
-    title: "Software Engineer",
-    company: "StartupX",
-    companyUrl: "https://example.com",
-    description:
-      "Desenvolvi a plataforma principal da empresa desde o início, contribuindo para o crescimento de 0 a 50k utilizadores. Implementei o sistema de autenticação e APIs REST.",
-    technologies: ["React", "Next.js", "Python", "FastAPI", "MongoDB"],
-  },
-  {
-    period: "2019 — 2021",
-    title: "Frontend Developer",
-    company: "Digital Agency",
-    companyUrl: "https://example.com",
-    description:
-      "Criei interfaces responsivas e acessíveis para diversos clientes. Estabeleci padrões de código e componentes reutilizáveis que aceleraram o desenvolvimento.",
-    technologies: ["JavaScript", "React", "Vue.js", "SCSS", "Figma"],
-  },
-  {
-    period: "2018 — 2019",
-    title: "Junior Developer",
-    company: "WebSolutions",
-    companyUrl: "https://example.com",
-    description:
-      "Iniciei a minha carreira profissional desenvolvendo websites e aplicações web. Aprendi metodologias ágeis e boas práticas de desenvolvimento.",
-    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-  },
-]
+function hasExternalUrl(url: string): boolean {
+  return /^https?:\/\//i.test(url)
+}
 
 export function Experience() {
   const { t } = useLanguage()
+  const experiences = t.experience.items
 
   return (
     <section id="experiencia" className="py-24 px-6 bg-card">
@@ -71,25 +37,26 @@ export function Experience() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group grid md:grid-cols-[200px_1fr] gap-4 p-6 rounded-lg hover:bg-secondary/50 transition-colors"
             >
-              <div className="text-sm text-muted-foreground font-mono">
-                {exp.period}
-              </div>
+              <div className="text-sm text-muted-foreground font-mono">{exp.period}</div>
               <div className="space-y-3">
                 <h3 className="text-lg font-medium text-foreground">
-                  {exp.title} ·{" "}
-                  <Link
-                    href={exp.companyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline inline-flex items-center gap-1"
-                  >
-                    {exp.company}
-                    <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
+                  {exp.title}
+                  {" · "}
+                  {hasExternalUrl(exp.companyUrl) ? (
+                    <Link
+                      href={exp.companyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline inline-flex items-center gap-1"
+                    >
+                      {exp.company}
+                      <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                  ) : (
+                    <span className="text-primary font-medium">{exp.company}</span>
+                  )}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-pretty">
-                  {exp.description}
-                </p>
+                <p className="text-muted-foreground leading-relaxed text-pretty">{exp.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech) => (
                     <span

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CV — Rui Sergio Mané</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:     #0f0f0f;
+    --ink2:    #3a3a3a;
+    --ink3:    #7a7a7a;
+    --rule:    #d8d4cc;
+    --accent:  #1a4a3a;
+    --accent2: #c8a96e;
+    --bg:      #f7f5f0;
+    --paper:   #ffffff;
+    --serif:   'Cormorant Garamond', Georgia, serif;
+    --mono:    'DM Mono', monospace;
+  }
+
+  html { font-size: 15px; background: var(--bg); }
+
+  body {
+    font-family: var(--serif);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 3rem 1rem;
+  }
+
+  .actions {
+    max-width: 780px;
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.6rem;
+  }
+  .action-btn {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--rule);
+    color: var(--ink2);
+    background: var(--paper);
+    padding: 0.55rem 0.85rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .action-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    background: var(--paper);
+    padding: 4rem 4.5rem;
+    border-left: 3px solid var(--accent);
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .name {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+  .name span { color: var(--accent); font-weight: 600; }
+  .role {
+    margin-top: 0.4rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent2);
+  }
+  .header-right {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ink3);
+    line-height: 2.1;
+  }
+  .header-right a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .header-right a:hover { border-color: var(--accent); }
+
+  /* GRID */
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+    gap: 3rem;
+    margin-top: 2.5rem;
+  }
+
+  .section { margin-bottom: 2.2rem; }
+  .section-title {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  /* LEFT */
+  .tagline {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink3);
+    border-left: 2px solid var(--accent2);
+    padding-left: 0.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  .sobre-text { font-size: 0.85rem; color: var(--ink2); line-height: 1.7; }
+
+  .skill-group { margin-bottom: 1rem; }
+  .skill-group-name {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    margin-bottom: 0.5rem;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    padding: 3px 8px;
+    border: 1px solid var(--rule);
+    color: var(--ink2);
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .tag:hover { border-color: var(--accent); color: var(--accent); }
+  .tag.hi { border-color: var(--accent2); color: var(--accent2); }
+
+  .lang-item { margin-bottom: 0.8rem; }
+  .lang-top { display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 0.3rem; }
+  .lang-level { font-family: var(--mono); font-size: 0.6rem; color: var(--ink3); }
+  .lang-bar { height: 2px; background: var(--rule); }
+  .lang-fill { height: 100%; background: var(--accent); }
+
+  /* RIGHT */
+  .exp-item {
+    margin-bottom: 1.8rem;
+    padding-left: 1.2rem;
+    border-left: 2px solid var(--rule);
+    position: relative;
+  }
+  .exp-item::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: var(--accent2);
+    border-radius: 50%;
+    position: absolute;
+    left: -4.5px; top: 6px;
+  }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; }
+  .exp-title { font-size: 1rem; font-weight: 600; }
+  .exp-date { font-family: var(--mono); font-size: 0.62rem; color: var(--ink3); }
+  .exp-company { font-size: 0.82rem; color: var(--accent); margin: 0.1rem 0 0.4rem; }
+  .exp-desc { font-size: 0.88rem; color: var(--ink2); line-height: 1.65; }
+  .exp-stack { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 0.5rem; }
+  .exp-tag {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    padding: 2px 6px;
+    background: #f0ede6;
+    color: var(--ink3);
+  }
+
+  .edu-item { margin-bottom: 1.4rem; }
+  .edu-title { font-size: 1rem; font-weight: 500; }
+  .edu-school { font-size: 0.82rem; color: var(--accent); margin: 0.1rem 0 0.2rem; }
+  .edu-date { font-family: var(--mono); font-size: 0.62rem; color: var(--ink3); }
+
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .proj-card {
+    border: 1px solid var(--rule);
+    padding: 0.9rem 1rem;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .proj-card:hover { border-color: var(--accent); }
+  .proj-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--accent2);
+    transition: width 0.3s ease;
+  }
+  .proj-card:hover::after { width: 100%; }
+  .proj-name { font-size: 0.92rem; font-weight: 600; color: var(--ink); }
+  .proj-badge {
+    font-family: var(--mono);
+    font-size: 0.52rem;
+    color: var(--accent2);
+    border: 1px solid var(--accent2);
+    padding: 1px 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  .proj-desc { font-size: 0.78rem; color: var(--ink3); margin: 0.3rem 0 0.5rem; line-height: 1.5; }
+  .proj-stack { display: flex; flex-wrap: wrap; gap: 4px; }
+  .proj-tag {
+    font-family: var(--mono);
+    font-size: 0.56rem;
+    color: var(--accent);
+    border: 1px solid var(--rule);
+    padding: 2px 5px;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--ink3);
+    letter-spacing: 0.1em;
+  }
+  .dot { color: var(--accent2); }
+
+  @media print {
+    body { padding: 0; background: white; }
+    .actions { display: none; }
+    .page { padding: 2.5rem 3rem; border: none; border-left: 3px solid var(--accent); }
+  }
+  @media (max-width: 620px) {
+    .page { padding: 2rem 1.5rem; }
+    .body { grid-template-columns: 1fr; }
+    .header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .header-right { text-align: left; }
+    .projects-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="actions">
+  <a class="action-btn" href="/">Voltar ao Portfolio</a>
+  <button class="action-btn" type="button" onclick="window.print()">Download PDF</button>
+</div>
+<div class="page">
+
+  <header class="header">
+    <div>
+      <h1 class="name">Rui Sergio <span>Mané</span></h1>
+      <p class="role">Software Engineer &nbsp;·&nbsp; Fullstack &nbsp;·&nbsp; Mobile</p>
+    </div>
+    <div class="header-right">
+      <div>Lisboa, Portugal</div>
+      <div><a href="mailto:rui.mane@email.com">rui.mane@email.com</a></div>
+      <div><a href="https://github.com/ruimane">github.com/ruimane</a></div>
+      <div><a href="https://linkedin.com/in/ruimane">linkedin.com/in/ruimane</a></div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- LEFT -->
+    <aside>
+
+      <section class="section">
+        <h2 class="section-title">Sobre</h2>
+        <p class="tagline">"Construo produtos digitais do back-end à interface, com atenção aos detalhes que fazem a diferença."</p>
+        <p class="sobre-text">Engenheiro informático com 3–4 anos de experiência a desenvolver aplicações web e mobile robustas. Apaixonado por arquitectura limpa, código legível e experiências de utilizador fluidas.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Competências</h2>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Frontend</div>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Vue.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Mantine UI</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Backend</div>
+          <div class="tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">REST API</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Mobile</div>
+          <div class="tags">
+            <span class="tag hi">React Native</span>
+            <span class="tag hi">Expo</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Dados &amp; DevOps</div>
+          <div class="tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Git</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Linguagens</div>
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Java</span>
+            <span class="tag">PHP</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Idiomas</h2>
+        <div class="lang-item">
+          <div class="lang-top"><span>Português</span><span class="lang-level">Nativo</span></div>
+          <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-top"><span>Espanhol</span><span class="lang-level">Fluente</span></div>
+          <div class="lang-bar"><div class="lang-fill" style="width:90%"></div></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-top"><span>Inglês</span><span class="lang-level">Intermédio</span></div>
+          <div class="lang-bar"><div class="lang-fill" style="width:65%"></div></div>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- RIGHT -->
+    <main>
+
+      <section class="section">
+        <h2 class="section-title">Experiência</h2>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-title">Engenheiro Fullstack</span>
+            <span class="exp-date">2024 — Presente</span>
+          </div>
+          <div class="exp-company">Projecto Independente / Freelance</div>
+          <p class="exp-desc">Desenvolvimento de aplicações web e mobile de raiz, gestão de arquitectura fullstack, integração de APIs REST e design de bases de dados relacionais. Colaboração directa com clientes para definição de requisitos e entrega contínua.</p>
+          <div class="exp-stack">
+            <span class="exp-tag">React</span>
+            <span class="exp-tag">React Native</span>
+            <span class="exp-tag">Node.js</span>
+            <span class="exp-tag">Laravel</span>
+            <span class="exp-tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-title">Desenvolvimento Backend &amp; API</span>
+            <span class="exp-date">2022 — 2024</span>
+          </div>
+          <div class="exp-company">Projectos Académicos &amp; Pessoais</div>
+          <p class="exp-desc">Construção de servidores RESTful com Express e Spring Boot, modelagem de dados com PostgreSQL, autenticação JWT e integração com sistemas externos. Aprofundamento em arquitecturas escaláveis e boas práticas de código.</p>
+          <div class="exp-stack">
+            <span class="exp-tag">Express</span>
+            <span class="exp-tag">Spring Boot</span>
+            <span class="exp-tag">Java</span>
+            <span class="exp-tag">PostgreSQL</span>
+            <span class="exp-tag">JWT</span>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Educação</h2>
+        <div class="edu-item">
+          <div class="edu-title">Licenciatura em Engenharia Informática</div>
+          <div class="edu-school">Universidad Central Marta Abreu de Las Villas</div>
+          <div class="edu-date">2021 — 2024</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Projectos em Destaque</h2>
+        <div class="projects-grid">
+
+          <div class="proj-card">
+            <div class="proj-name">BebrasCuba</div>
+            <p class="proj-desc">Plataforma web completa com gestão de conteúdos, painel administrativo e interface moderna e responsiva.</p>
+            <div class="proj-stack">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Laravel</span>
+              <span class="proj-tag">PostgreSQL</span>
+              <span class="proj-tag">Mantine UI</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-name">MedFlow Pro</div>
+            <p class="proj-desc">Aplicação para gestão de fluxos médicos, agendamentos e registos clínicos de pacientes.</p>
+            <div class="proj-stack">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Express</span>
+              <span class="proj-tag">Node.js</span>
+              <span class="proj-tag">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-name">TaskFlow <span class="proj-badge">Em dev.</span></div>
+            <p class="proj-desc">Aplicativo mobile de gestão de tarefas com autenticação, notificações push e sincronização em tempo real.</p>
+            <div class="proj-stack">
+              <span class="proj-tag">React Native</span>
+              <span class="proj-tag">Expo</span>
+              <span class="proj-tag">Firebase</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>Rui Sergio Mané <span class="dot">·</span> Engenheiro Informático</span>
+    <span>2025</span>
+  </footer>
+
+</div>
+</body>
+</html>

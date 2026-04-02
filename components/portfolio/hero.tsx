@@ -45,14 +45,15 @@ export function Hero() {
             <div className="flex items-center gap-4">
               <Link
                 href="#contacto"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium text-primary-foreground bg-primary/80 backdrop-blur-md border border-primary/40 shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center px-7 py-3 rounded-xl text-sm font-medium tracking-wide text-zinc-100 bg-gradient-to-b from-zinc-700 to-zinc-800 border border-zinc-600/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),inset_0_-1px_0_rgba(0,0,0,0.45),0_3px_0_rgba(24,24,27,1),0_10px_18px_-12px_rgba(0,0,0,0.9)] hover:from-zinc-600 hover:to-zinc-700 hover:-translate-y-0.5 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-1px_0_rgba(0,0,0,0.4),0_4px_0_rgba(24,24,27,1),0_12px_22px_-12px_rgba(0,0,0,0.95)] active:translate-y-0.5 active:shadow-[inset_0_1px_0_rgba(255,255,255,0.12),inset_0_-1px_0_rgba(0,0,0,0.5),0_1px_0_rgba(24,24,27,1),0_6px_12px_-10px_rgba(0,0,0,0.85)] transition-all"
               >
                 {t.hero.contact}
               </Link>
               <Link
-                href="/cv.pdf"
-                download
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium text-foreground bg-background/80 backdrop-blur-md border border-border/50 hover:bg-background/90 transition-colors"
+                href="/cv-rui-sergio-mane.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-7 py-3 rounded-xl text-sm font-medium tracking-wide text-emerald-50 bg-gradient-to-b from-emerald-600 to-emerald-700 border border-emerald-400/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.2),inset_0_-1px_0_rgba(0,64,42,0.65),0_3px_0_rgba(6,78,59,1),0_10px_18px_-12px_rgba(0,24,15,0.9)] hover:from-emerald-500 hover:to-emerald-600 hover:-translate-y-0.5 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.22),inset_0_-1px_0_rgba(0,64,42,0.55),0_4px_0_rgba(6,78,59,1),0_12px_22px_-12px_rgba(0,24,15,0.95)] active:translate-y-0.5 active:shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-1px_0_rgba(0,64,42,0.7),0_1px_0_rgba(6,78,59,1),0_6px_12px_-10px_rgba(0,24,15,0.85)] transition-all"
               >
                 {t.hero.downloadCV}
               </Link>

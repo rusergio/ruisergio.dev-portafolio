@@ -25,13 +25,13 @@ export const translations = {
       title: "Transformar Ideias em",
       titleHighlight: "Realidade",
       bio1:
-        "Com paixão pelo desenvolvimento de software e anos de experiência na construção de aplicações em vários domínios, especializo-me na criação de soluções robustas e escaláveis que resolvem problemas do mundo real.",
+        "Sou engenheiro informático com mais de 3 anos de experiência a desenvolver aplicações web e mobile, do back-end à interface. Especializo-me em soluções robustas e escaláveis que resolvem problemas reais.",
       bio2:
-        "A minha experiência abrange desenvolvimento full-stack, desde a criação de interfaces de utilizador intuitivas ao design de arquiteturas backend eficientes. Acredito em escrever código que não só funciona, mas que também é elegante e de fácil manutenção.",
+        "Ao longo deste percurso já realizei mais de 10 projetos — desde plataformas completas a APIs e aplicações mobile — sempre com foco em código limpo, arquitetura sólida e boa experiência de utilização.",
       bio3:
-        "Quando não estou a programar, encontra-me a explorar novas tecnologias, a contribuir para projetos open-source ou a partilhar conhecimento com a comunidade de developers.",
-      stat1: "Anos Experiência",
-      stat2: "Projetos Completos",
+        "Trabalho habitualmente com mais de 20 tecnologias no ecossistema full-stack (frontend, backend, bases de dados e DevOps), mantendo-me atualizado com as melhores práticas da indústria.",
+      stat1: "Anos de Experiência",
+      stat2: "Projetos Realizados",
       stat3: "Tecnologias",
       highlight1Title: "Código Limpo",
       highlight1Desc: "Escrever código sustentável e escalável que resiste ao teste do tempo",
@@ -57,6 +57,62 @@ export const translations = {
     },
     experience: {
       title: "Experiência",
+      items: [
+        {
+          period: "2024 — 2026",
+          title: "Engenheiro de Software / Full Stack",
+          company: "BebrasCuba",
+          companyUrl: "",
+          description:
+            "Desenvolvimento full-stack de uma plataforma de apoio ao concurso BebrasCuba: interface com React, Mantine UI, CSS e TypeScript; backend e API com Laravel; dados em PostgreSQL; ambiente com Docker e código em GitHub.",
+          technologies: [
+            "React",
+            "Mantine UI",
+            "CSS",
+            "TypeScript",
+            "Laravel",
+            "PostgreSQL",
+            "Docker",
+            "GitHub",
+          ],
+        },
+        {
+          period: "2023 — Presente",
+          title: "Senior Software Engineer",
+          company: "TechCorp",
+          companyUrl: "https://example.com",
+          description:
+            "Lidero o desenvolvimento de microserviços críticos que processam milhões de transações diárias. Implemento arquiteturas escaláveis e mentoro desenvolvedores juniores na equipa.",
+          technologies: ["TypeScript", "Node.js", "AWS", "Kubernetes", "PostgreSQL"],
+        },
+        {
+          period: "2021 — 2023",
+          title: "Software Engineer",
+          company: "StartupX",
+          companyUrl: "https://example.com",
+          description:
+            "Desenvolvi a plataforma principal da empresa desde o início, contribuindo para o crescimento de 0 a 50k utilizadores. Implementei o sistema de autenticação e APIs REST.",
+          technologies: ["React", "Next.js", "Python", "FastAPI", "MongoDB"],
+        },
+        {
+          period: "2019 — 2021",
+          title: "Frontend Developer",
+          company: "Digital Agency",
+          companyUrl: "https://example.com",
+          description:
+            "Criei interfaces responsivas e acessíveis para diversos clientes. Estabeleci padrões de código e componentes reutilizáveis que aceleraram o desenvolvimento.",
+          technologies: ["JavaScript", "React", "Vue.js", "SCSS", "Figma"],
+        },
+        {
+          period: "2018 — 2019",
+          title: "Junior Developer",
+          company: "WebSolutions",
+          companyUrl: "https://example.com",
+          description:
+            "Iniciei a minha carreira profissional desenvolvendo websites e aplicações web. Aprendi metodologias ágeis e boas práticas de desenvolvimento.",
+          technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        },
+      ],
     },
     projects: {
       tag: "Portfolio",
@@ -148,13 +204,13 @@ export const translations = {
       title: "Turning Ideas Into",
       titleHighlight: "Reality",
       bio1:
-        "With a passion for software development and years of experience building applications across various domains, I specialize in creating robust, scalable solutions that solve real-world problems.",
+        "I'm a software engineer with 3+ years of experience building web and mobile applications—from backend to UI. I focus on robust, scalable solutions that solve real problems.",
       bio2:
-        "My expertise spans full-stack development, from crafting intuitive user interfaces to designing efficient backend architectures. I believe in writing code that not only works but is also elegant and maintainable.",
+        "I've delivered 10+ projects so far, from full platforms to APIs and mobile apps, always prioritizing clean code, solid architecture, and a great user experience.",
       bio3:
-        "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.",
-      stat1: "Years Experience",
-      stat2: "Projects Completed",
+        "I regularly work with 20+ technologies across the full stack—frontend, backend, databases, and DevOps—and I keep up with industry best practices.",
+      stat1: "Years of Experience",
+      stat2: "Projects Delivered",
       stat3: "Technologies",
       highlight1Title: "Clean Code",
       highlight1Desc: "Writing maintainable, scalable code that stands the test of time",
@@ -180,6 +236,62 @@ export const translations = {
     },
     experience: {
       title: "Experience",
+      items: [
+        {
+          period: "2024 — 2026",
+          title: "Software Engineer / Full Stack",
+          company: "BebrasCuba",
+          companyUrl: "",
+          description:
+            "Full-stack development of a platform supporting the BebrasCuba competition: UI with React, Mantine UI, CSS, and TypeScript; backend and APIs with Laravel; PostgreSQL for data; Docker for environments; collaboration on GitHub.",
+          technologies: [
+            "React",
+            "Mantine UI",
+            "CSS",
+            "TypeScript",
+            "Laravel",
+            "PostgreSQL",
+            "Docker",
+            "GitHub",
+          ],
+        },
+        {
+          period: "2023 — Present",
+          title: "Senior Software Engineer",
+          company: "TechCorp",
+          companyUrl: "https://example.com",
+          description:
+            "I lead development of critical microservices processing millions of daily transactions. I implement scalable architectures and mentor junior developers on the team.",
+          technologies: ["TypeScript", "Node.js", "AWS", "Kubernetes", "PostgreSQL"],
+        },
+        {
+          period: "2021 — 2023",
+          title: "Software Engineer",
+          company: "StartupX",
+          companyUrl: "https://example.com",
+          description:
+            "I built the company’s main platform from scratch, helping grow from 0 to 50k users. I implemented authentication and REST APIs.",
+          technologies: ["React", "Next.js", "Python", "FastAPI", "MongoDB"],
+        },
+        {
+          period: "2019 — 2021",
+          title: "Frontend Developer",
+          company: "Digital Agency",
+          companyUrl: "https://example.com",
+          description:
+            "I built responsive, accessible interfaces for multiple clients. I established code standards and reusable components that sped up delivery.",
+          technologies: ["JavaScript", "React", "Vue.js", "SCSS", "Figma"],
+        },
+        {
+          period: "2018 — 2019",
+          title: "Junior Developer",
+          company: "WebSolutions",
+          companyUrl: "https://example.com",
+          description:
+            "I started my career building websites and web apps. I learned agile practices and solid development habits.",
+          technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        },
+      ],
     },
     projects: {
       tag: "Portfolio",
