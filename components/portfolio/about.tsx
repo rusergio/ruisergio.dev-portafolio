@@ -15,10 +15,11 @@ const categoryKeys = ["frontend", "backend", "database", "devops"] as const
 
 const skillsByCategory = {
   frontend: [
-    "JavaScript / TypeScript",
-    "React / Next.js",
-    "HTML / CSS / Tailwind",
-    "React Native / Expo",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Vue / CSS / Tailwind",
+    "React Native + Expo",
   ],
   backend: [
     "Node.js",
@@ -26,16 +27,13 @@ const skillsByCategory = {
     "Laravel",
     "PHP",
     "Spring Boot",
-    "Java",
-    "REST & GraphQL APIs",
+    "Java"
   ],
   database: [
     "PostgreSQL",
     "MySQL",
     "Firebase",
     "Supabase",
-    "SQLite",
-    "MongoDB",
     "Prisma",
   ],
   devops: [

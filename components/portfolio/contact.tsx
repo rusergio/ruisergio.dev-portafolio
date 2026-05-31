@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, MapPin, Send, Facebook, Instagram } from "lucide-react"
-import { Linkedin } from "lucide-react"
+import { Mail, MapPin, Phone, Send, Facebook, Instagram, Linkedin } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -95,7 +94,13 @@ export function Contact() {
               {/* Contact details */}
               <div className="space-y-6">
                 {[
-                  { icon: Mail, label: t.contact.email, value: "rui.mane@example.com", href: "mailto:rui.mane@example.com" },
+                  { icon: Mail, label: t.contact.email, value: "sergimane83@gmail.com", href: "mailto:sergimane83@gmail.com" },
+                  {
+                    icon: Phone,
+                    label: t.contact.phone,
+                    value: "+351 964 557 166",
+                    href: "tel:+351964557166",
+                  },
                   { icon: MapPin, label: t.contact.location, value: t.contact.locationValue, href: null },
                 ].map((item, index) => (
                   <motion.div

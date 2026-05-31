@@ -17,7 +17,7 @@ export const translations = {
       description:
         "Criar soluções elegantes através de código limpo. Apaixonado por construir aplicações escaláveis e experiências de utilizador excecionais.",
       viewWork: "Ver Trabalho",
-      downloadCV: "Descarregar CV",
+      viewCV: "Ver CV",
       contact: "Contactar",
     },
     about: {
@@ -59,12 +59,26 @@ export const translations = {
       title: "Experiência",
       items: [
         {
-          period: "2024 — 2026",
-          title: "Engenheiro de Software / Full Stack",
+          period: "2026 — Presente",
+          title: "Software Engineer",
+          company: "Nyam",
+          companyUrl: "",
+          context: "Freelance · Aplicação mobile (projecto de produto)",
+          launchNote: "Previsão de lançamento: Julho de 2026.",
+          description:
+            "Nyam é uma app móvel multiplataforma (iOS e Android) com planos alimentares personalizados baseados em culturas africanas e caribenhas — inclusão, saúde e educação nutricional contextualizada culturalmente, num mercado com poucas soluções assim.",
+          technologies: ["React Native", "Expo", "TypeScript", "Firebase", "Expo EAS"],
+        },
+        {
+          period: "2024 — Presente",
+          title: "Software Engineer",
           company: "BebrasCuba",
           companyUrl: "",
+          context: "Projeto atribuído pela universidade · Full-stack · Aplicação Web",
+          launchNote:
+            "Previsão de lançamento: indefinida (expectativa para 2026; mês e dia por definir).",
           description:
-            "Desenvolvimento full-stack de uma plataforma de apoio ao concurso BebrasCuba: interface com React, Mantine UI, CSS e TypeScript; backend e API com Laravel; dados em PostgreSQL; ambiente com Docker e código em GitHub.",
+            "Plataforma web para apoiar a gestão do concurso internacional Bebras em Cuba: permite à organização nacional reunir dados de participantes e resultados da competição ao nível nacional.",
           technologies: [
             "React",
             "Mantine UI",
@@ -77,40 +91,47 @@ export const translations = {
           ],
         },
         {
-          period: "2023 — Presente",
-          title: "Senior Software Engineer",
-          company: "TechCorp",
-          companyUrl: "https://example.com",
-          description:
-            "Lidero o desenvolvimento de microserviços críticos que processam milhões de transações diárias. Implemento arquiteturas escaláveis e mentoro desenvolvedores juniores na equipa.",
-          technologies: ["TypeScript", "Node.js", "AWS", "Kubernetes", "PostgreSQL"],
-        },
-        {
-          period: "2021 — 2023",
+          period: "2026 — Presente",
           title: "Software Engineer",
-          company: "StartupX",
-          companyUrl: "https://example.com",
+          company: "MedFlow Pro",
+          companyUrl: "",
+          context: "Freelance · Aplicação Web",
+          launchNote: "Previsão de lançamento prevista: Junho de 2026.",
           description:
-            "Desenvolvi a plataforma principal da empresa desde o início, contribuindo para o crescimento de 0 a 50k utilizadores. Implementei o sistema de autenticação e APIs REST.",
-          technologies: ["React", "Next.js", "Python", "FastAPI", "MongoDB"],
+            "Aplicação web para gestão hospitalar: agendamento de consultas, registo de pacientes, serviço farmacêutico, assistente de IA e estrutura de controlo de pacientes.",
+          technologies: [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "Prisma",
+            "PostgreSQL",
+            "Google GenAI",
+          ],
         },
         {
-          period: "2019 — 2021",
-          title: "Frontend Developer",
-          company: "Digital Agency",
-          companyUrl: "https://example.com",
+          period: "2026 — Presente",
+          title: "Software Engineer",
+          company: "TaskFlow",
+          companyUrl: "",
+          context: "Freelance · Aplicação móvel",
+          launchNote: "Previsão de lançamento: Maio de 2026.",
           description:
-            "Criei interfaces responsivas e acessíveis para diversos clientes. Estabeleci padrões de código e componentes reutilizáveis que aceleraram o desenvolvimento.",
-          technologies: ["JavaScript", "React", "Vue.js", "SCSS", "Figma"],
+            "Aplicação móvel para gestão de tarefas: marcar tarefas diárias e planear tarefas futuras. Interface simples, intuitiva e fácil de usar.",
+          technologies: ["React Native", "Expo", "TypeScript", "Firebase", "Expo EAS"],
         },
         {
-          period: "2018 — 2019",
-          title: "Junior Developer",
-          company: "WebSolutions",
-          companyUrl: "https://example.com",
+          period: "2026 — Presente",
+          title: "Java Backend Developer",
+          company: "Bank Management-API",
+          companyUrl: "",
+          context: "Freelance · API REST",
+          launchNote: "Previsão de conclusão: Maio de 2026.",
           description:
-            "Iniciei a minha carreira profissional desenvolvendo websites e aplicações web. Aprendi metodologias ágeis e boas práticas de desenvolvimento.",
-          technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+            "API com serviços bancários: depósitos, levantamentos, transferências e movimentos; login e registo de utilizadores; consulta de saldo e de transações.",
+          technologies: ["Java", "Spring Boot", "JWT", "Maven", "PostgreSQL"],
         },
       ],
     },
@@ -127,28 +148,49 @@ export const translations = {
       mobile: "Mobile",
       viewProject: "Ver Projeto",
       project1: {
-        title: "Plataforma E-Commerce",
-        description: "Uma solução e-commerce full-stack com inventário em tempo real, processamento de pagamentos e painel de administração.",
+        title: "BebrasCuba",
+        description:
+          "Plataforma web full-stack para apoiar a gestão do concurso internacional Bebras em Cuba: dados de participantes e resultados ao nível nacional. React, Mantine UI, TypeScript, Laravel, PostgreSQL e Docker.",
       },
       project2: {
-        title: "App Gestão Tarefas",
-        description: "Ferramenta colaborativa de gestão de projetos com atualizações em tempo real, drag-and-drop e funcionalidades de equipa.",
+        title: "MedFlow Pro",
+        description:
+          "Aplicação web full-stack para gestão hospitalar: consultas, pacientes, farmácia, assistente de IA e controlos. React, Vite, Node.js, Express, Prisma, PostgreSQL e Google GenAI.",
       },
       project3: {
-        title: "Dashboard Analytics",
-        description: "Dashboard interativo de visualização de dados com gráficos personalizados, filtros e capacidades de exportação.",
+        title: "TechNova",
+        description:
+          "E-commerce de dispositivos tecnológicos: computadores, telemóveis, auscultadores, carregadores, cabos e produtos similares. Frontend com React, HeroUI e Tailwind CSS.",
       },
       project4: {
-        title: "Serviço API Gateway",
-        description: "Gateway API de alto desempenho com rate limiting, caching e middleware de autenticação.",
+        title: "Bank Management-API",
+        description:
+          "API REST com serviços bancários: depósitos, levantamentos, transferências e extrato; autenticação com JWT; registo e login de utilizadores; consulta de saldo e histórico de transações.",
       },
       project5: {
-        title: "App Banking Mobile",
-        description: "Aplicação de mobile banking segura com autenticação biométrica, transações e controlo de orçamento.",
+        title: "TaskFlow",
+        description:
+          "App móvel para gestão de tarefas: marcar tarefas diárias e planear tarefas futuras, com interface simples e intuitiva.",
       },
       project6: {
-        title: "Gerador de Conteúdo IA",
-        description: "Ferramenta de criação de conteúdo alimentada por IA com templates, otimização SEO e suporte multi-idioma.",
+        title: "ChronosFlow",
+        description:
+          "Horários de trabalho e cálculo de horas realizadas: para quem trabalha à hora, marca os dias e horários em que trabalhaste durante a semana. Perfil estudante: planear horas de estudo — por exemplo, num curso de 200 horas, estima quantos dias seriam necessários e quantas horas por dia podes estudar.",
+      },
+      project7: {
+        title: "Nyam",
+        description:
+          "App multiplataforma com planos alimentares baseados em tradições africanas e caribenhas — inclusão, saúde e educação nutricional contextualizada.",
+      },
+      project8: {
+        title: "Gestor de despesas",
+        description:
+          "Aplicação para registo de despesas, categorias e acompanhamento do orçamento pessoal com visão mensal simples.",
+      },
+      project9: {
+        title: "Este portfólio (ruisergio.dev)",
+        description:
+          "Este site: apresentação profissional com sobre, competências, experiência, projetos e contacto; Next.js, React, TypeScript, Tailwind CSS, animações e português/inglês.",
       },
     },
     contact: {
@@ -161,13 +203,14 @@ export const translations = {
       infoDesc:
         "Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte das suas visões.",
       email: "Email",
+      phone: "Telemóvel",
       location: "Localização",
       locationValue: "Lisboa, Portugal",
       followMe: "Siga-me em",
       nameLabel: "Nome",
       namePlaceholder: "O seu nome",
       emailLabel: "Email",
-      emailPlaceholder: "seu@email.com",
+      emailPlaceholder: "O seu email",
       messageLabel: "Mensagem",
       messagePlaceholder: "Conte-me sobre o seu projeto...",
       sending: "A enviar...",
@@ -196,7 +239,7 @@ export const translations = {
       description:
         "Crafting elegant solutions through clean code. Passionate about building scalable applications and exceptional user experiences.",
       viewWork: "View My Work",
-      downloadCV: "Download CV",
+      viewCV: "View CV",
       contact: "Contact",
     },
     about: {
@@ -238,12 +281,26 @@ export const translations = {
       title: "Experience",
       items: [
         {
-          period: "2024 — 2026",
-          title: "Software Engineer / Full Stack",
+          period: "2026 — Present",
+          title: "Software Engineer",
+          company: "Nyam",
+          companyUrl: "",
+          context: "Freelance · Mobile app (product development)",
+          launchNote: "Planned launch: July 2026.",
+          description:
+            "Nyam is a cross-platform mobile app (iOS and Android) offering culturally rooted meal plans from African and Caribbean food traditions—inclusion, health, and culturally contextual nutrition education, filling a clear gap in existing apps. Freelance build with React Native, Expo, TypeScript, Firebase, and Expo EAS.",
+          technologies: ["React Native", "Expo", "TypeScript", "Firebase", "Expo EAS"],
+        },
+        {
+          period: "2024 — Present",
+          title: "Software Engineer",
           company: "BebrasCuba",
           companyUrl: "",
+          context: "University-assigned project · Full-stack · Web application",
+          launchNote:
+            "Launch date: TBD (likely in 2026; month and day not set yet).",
           description:
-            "Full-stack development of a platform supporting the BebrasCuba competition: UI with React, Mantine UI, CSS, and TypeScript; backend and APIs with Laravel; PostgreSQL for data; Docker for environments; collaboration on GitHub.",
+            "Web platform to support management of the international Bebras competition in Cuba: helps the national organization gather participant data and competition results at the national level.",
           technologies: [
             "React",
             "Mantine UI",
@@ -256,40 +313,47 @@ export const translations = {
           ],
         },
         {
-          period: "2023 — Present",
-          title: "Senior Software Engineer",
-          company: "TechCorp",
-          companyUrl: "https://example.com",
-          description:
-            "I lead development of critical microservices processing millions of daily transactions. I implement scalable architectures and mentor junior developers on the team.",
-          technologies: ["TypeScript", "Node.js", "AWS", "Kubernetes", "PostgreSQL"],
-        },
-        {
-          period: "2021 — 2023",
+          period: "2026 — Present",
           title: "Software Engineer",
-          company: "StartupX",
-          companyUrl: "https://example.com",
+          company: "MedFlow Pro",
+          companyUrl: "",
+          context: "Freelance · Web application",
+          launchNote: "Planned launch: June 2026.",
           description:
-            "I built the company’s main platform from scratch, helping grow from 0 to 50k users. I implemented authentication and REST APIs.",
-          technologies: ["React", "Next.js", "Python", "FastAPI", "MongoDB"],
+            "Web application for hospital management: appointment scheduling, patient registration, pharmacy services, an AI assistant, and patient care workflows.",
+          technologies: [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "Prisma",
+            "PostgreSQL",
+            "Google GenAI",
+          ],
         },
         {
-          period: "2019 — 2021",
-          title: "Frontend Developer",
-          company: "Digital Agency",
-          companyUrl: "https://example.com",
+          period: "2026 — Present",
+          title: "Software Engineer",
+          company: "TaskFlow",
+          companyUrl: "",
+          context: "Freelance · Mobile application",
+          launchNote: "Planned launch: May 2026.",
           description:
-            "I built responsive, accessible interfaces for multiple clients. I established code standards and reusable components that sped up delivery.",
-          technologies: ["JavaScript", "React", "Vue.js", "SCSS", "Figma"],
+            "Mobile app for task management: daily tasks and future-dated tasks. Simple, intuitive, and easy to use.",
+          technologies: ["React Native", "Expo", "TypeScript", "Firebase", "Expo EAS"],
         },
         {
-          period: "2018 — 2019",
-          title: "Junior Developer",
-          company: "WebSolutions",
-          companyUrl: "https://example.com",
+          period: "2026 — Present",
+          title: "Java Backend Developer",
+          company: "Bank Management-API",
+          companyUrl: "",
+          context: "Freelance · REST API",
+          launchNote: "Target completion: May 2026.",
           description:
-            "I started my career building websites and web apps. I learned agile practices and solid development habits.",
-          technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+            "API offering banking services: deposits, withdrawals, transfers, and statements; user login and registration; balance and transaction history.",
+          technologies: ["Java", "Spring Boot", "JWT", "Maven", "PostgreSQL"],
         },
       ],
     },
@@ -306,28 +370,49 @@ export const translations = {
       mobile: "Mobile",
       viewProject: "View Project",
       project1: {
-        title: "E-Commerce Platform",
-        description: "A full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
+        title: "BebrasCuba",
+        description:
+          "Full-stack web platform for managing the international Bebras competition in Cuba—national participant data and results. React, Mantine UI, TypeScript, Laravel, PostgreSQL, and Docker.",
       },
       project2: {
-        title: "Task Management App",
-        description: "Collaborative project management tool with real-time updates, drag-and-drop, and team features.",
+        title: "MedFlow Pro",
+        description:
+          "Full-stack web app for hospital management: appointments, patients, pharmacy, an AI assistant, and care workflows. React, Vite, Node.js, Express, Prisma, PostgreSQL, and Google GenAI.",
       },
       project3: {
-        title: "Analytics Dashboard",
-        description: "Interactive data visualization dashboard with custom charts, filters, and export capabilities.",
+        title: "TechNova",
+        description:
+          "E-commerce for tech devices: computers, phones, headphones, chargers, cables, and similar products. Frontend built with React, HeroUI, and Tailwind CSS.",
       },
       project4: {
-        title: "API Gateway Service",
-        description: "High-performance API gateway with rate limiting, caching, and authentication middleware.",
+        title: "Bank Management-API",
+        description:
+          "REST API for banking: deposits, withdrawals, transfers, and statements; JWT authentication; user registration and login; balance and transaction history.",
       },
       project5: {
-        title: "Mobile Banking App",
-        description: "Secure mobile banking application with biometric auth, transactions, and budget tracking.",
+        title: "TaskFlow",
+        description:
+          "Mobile app for task management: daily tasks and future-dated tasks, with a simple, intuitive interface.",
       },
       project6: {
-        title: "AI Content Generator",
-        description: "AI-powered content creation tool with templates, SEO optimization, and multi-language support.",
+        title: "ChronosFlow",
+        description:
+          "Work schedules and tracked hours: for hourly work, log the days and times you worked through the week. Student mode: plan study hours—for a 200-hour course, estimate how many days you need and how many hours per day you can study.",
+      },
+      project7: {
+        title: "Nyam",
+        description:
+          "Cross-platform app with meal plans rooted in African and Caribbean food traditions—inclusion, health, and culturally contextual nutrition.",
+      },
+      project8: {
+        title: "Expense manager",
+        description:
+          "App to log expenses, use categories, and track a personal budget with a straightforward monthly overview.",
+      },
+      project9: {
+        title: "This portfolio (ruisergio.dev)",
+        description:
+          "This site: professional profile with about, skills, experience, projects, and contact—Next.js, React, TypeScript, Tailwind CSS, motion, and English/Portuguese.",
       },
     },
     contact: {
@@ -340,13 +425,14 @@ export const translations = {
       infoDesc:
         "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
       email: "Email",
+      phone: "Phone",
       location: "Location",
       locationValue: "Lisbon, Portugal",
       followMe: "Follow me on",
       nameLabel: "Name",
       namePlaceholder: "Your name",
       emailLabel: "Email",
-      emailPlaceholder: "your@email.com",
+      emailPlaceholder: "Your email",
       messageLabel: "Message",
       messagePlaceholder: "Tell me about your project...",
       sending: "Sending...",

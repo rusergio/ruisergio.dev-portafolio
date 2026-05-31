@@ -1,7 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { useLanguage } from "@/components/language-context"
 import { motion, AnimatePresence } from "framer-motion"
@@ -16,13 +17,32 @@ const navIds = [
   { key: "contact" as const, href: "#contacto" },
 ]
 
+function prefersReducedMotion(): boolean {
+  if (typeof window === "undefined") return false
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
+}
+
 export function Header() {
+  const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("")
   const { theme, setTheme } = useTheme()
   const { t, language, toggleLanguage } = useLanguage()
   const isDark = theme === "dark"
+
+  const handleLogoClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (pathname === "/") {
+        e.preventDefault()
+        window.scrollTo({
+          top: 0,
+          behavior: prefersReducedMotion() ? "auto" : "smooth",
+        })
+      }
+    },
+    [pathname]
+  )
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,14 +86,22 @@ export function Header() {
       >
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
+            {/* Logo — em / faz scroll suave ao topo; noutras rotas navega normalmente */}
             <Link
               href="/"
-              className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+              onClick={handleLogoClick}
+              className="group relative text-xl font-bold text-foreground outline-none transition-colors duration-300 hover:text-primary focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                {"RuiSergio.dev"}
-              </span>
+              <motion.span
+                className="inline-block origin-left"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              >
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                  {"RuiSergio.dev"}
+                </span>
+              </motion.span>
             </Link>
 
             {/* Desktop Navigation */}

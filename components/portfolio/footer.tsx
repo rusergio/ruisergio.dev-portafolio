@@ -3,25 +3,10 @@
 import { Github, Gitlab, Heart } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 
-// Bitbucket Icon Component
-function BitbucketIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden
-    >
-      <path d="M.778 1.213a.768.768 0 00-.768.892l3.263 19.81c.084.5.212.889.4 1.154.225.31.577.496 1.003.496h13.708a.768.768 0 00.768-.895l-3.27-20.01a.768.768 0 00-.768-.641H.778zm14.52 14.498L15.72 17.5H8.28l-1.2-1.789h10.218zm-1.97-2.94l-1.5-2.25H8.97l-1.5 2.25H5.592l4.5-6.75h5.816l4.5 6.75h-1.878z" />
-    </svg>
-  )
-}
-
 const socialLinks = [
   { icon: Github, href: "#", label: "GitHub" },
   { icon: Gitlab, href: "#", label: "GitLab" },
-] 
+]
 
 export function Footer() {
   const { t } = useLanguage()

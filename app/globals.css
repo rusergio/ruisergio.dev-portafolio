@@ -3,6 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Scroll suave em âncoras e navegação (respeita “reduzir movimento”) */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Tema claro por defecto */
 :root {
   --background: oklch(0.985 0.005 230);

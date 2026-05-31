@@ -22,7 +22,6 @@ import {
   GitHubLight,
   GitLab,
   GraphQL,
-  HTML5,
   Java,
   JavaScript,
   Jest,
@@ -53,6 +52,7 @@ import {
   VercelDark,
   VercelLight,
   Vite,
+  Vue,
 } from "@ridemountainpig/svgl-react"
 
 const skillCategoryKeys = ["frontend", "backend", "database", "devops"] as const
@@ -76,7 +76,7 @@ const skillCategories: Record<(typeof skillCategoryKeys)[number], SkillItem[]> =
     { label: "TypeScript", Icon: TypeScript },
     { label: "React", Dark: ReactDark, Light: ReactLight },
     { label: "Next.js", Icon: Nextjs },
-    { label: "HTML5", Icon: HTML5 },
+    { label: "Vue.js", Icon: Vue },
     { label: "CSS", Icon: CSS },
     { label: "Tailwind CSS", Icon: TailwindCSS },
     { label: "Expo", Icon: Expo },

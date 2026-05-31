@@ -56,7 +56,15 @@ export function Experience() {
                     <span className="text-primary font-medium">{exp.company}</span>
                   )}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-pretty">{exp.description}</p>
+                {exp.context ? (
+                  <p className="text-sm font-medium text-primary">{exp.context}</p>
+                ) : null}
+                {exp.launchNote ? (
+                  <p className="text-xs text-muted-foreground italic">{exp.launchNote}</p>
+                ) : null}
+                <p className="text-muted-foreground leading-relaxed text-pretty whitespace-pre-line">
+                  {exp.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech) => (
                     <span
